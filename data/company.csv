@@ -1,0 +1,51 @@
+id,first_name_ar,first_name_en,last_name_ar,last_name_en,department_ar,department_en,city_ar,city_en,salary_egp,hire_date,performance_rating,sales_amount_egp,region_ar,region_en
+1,أحمد,Ahmed,محمد,Mohamed,المبيعات,Sales,القاهرة,Cairo,12500,2021-03-15,4.5,85000,القاهرة الكبرى,Greater Cairo
+2,فاطمة,Fatma,علي,Ali,التسويق,Marketing,الجيزة,Giza,11000,2020-07-22,4.2,42000,القاهرة الكبرى,Greater Cairo
+3,محمود,Mahmoud,حسن,Hassan,تقنية المعلومات,IT,الإسكندرية,Alexandria,15000,2019-11-01,4.8,15000,الدلتا,Delta
+4,سارة,Sara,إبراهيم,Ibrahim,الموارد البشرية,HR,القاهرة,Cairo,9500,2022-01-10,3.9,0,القاهرة الكبرى,Greater Cairo
+5,خالد,Khaled,عبد الله,Abdullah,المبيعات,Sales,المنصورة,Mansoura,13200,2020-05-30,4.6,92000,الدلتا,Delta
+6,نور,Nour,السيد,Elsayed,المالية,Finance,القاهرة,Cairo,14000,2018-09-12,4.7,0,القاهرة الكبرى,Greater Cairo
+7,مصطفى,Mostafa,كامل,Kamel,المبيعات,Sales,طنطا,Tanta,11800,2021-08-05,4.1,67000,الدلتا,Delta
+8,هند,Hend,محمود,Mahmoud,التسويق,Marketing,أسيوط,Asyut,10500,2022-06-18,4.0,38000,الصعيد,Upper Egypt
+9,كريم,Karim,فؤاد,Fouad,تقنية المعلومات,IT,القاهرة,Cairo,16500,2017-04-25,4.9,22000,القاهرة الكبرى,Greater Cairo
+10,منى,Mona,سعيد,Saeed,المبيعات,Sales,الإسكندرية,Alexandria,12900,2020-12-01,4.3,78000,الدلتا,Delta
+11,يوسف,Youssef,أحمد,Ahmed,المالية,Finance,الجيزة,Giza,13500,2019-02-14,4.4,0,القاهرة الكبرى,Greater Cairo
+12,دينا,Dina,خالد,Khaled,الموارد البشرية,HR,القاهرة,Cairo,9800,2021-10-20,3.8,0,القاهرة الكبرى,Greater Cairo
+13,عمر,Omar,الشريف,Elsharif,المبيعات,Sales,سوهاج,Sohag,11200,2022-03-11,4.0,54000,الصعيد,Upper Egypt
+14,رانيا,Rania,فتحي,Fathy,التسويق,Marketing,القاهرة,Cairo,11500,2020-08-08,4.5,51000,القاهرة الكبرى,Greater Cairo
+15,حسن,Hassan,عمر,Omar,تقنية المعلومات,IT,المنصورة,Mansoura,14800,2019-06-19,4.6,18000,الدلتا,Delta
+16,شيماء,Shaimaa,حسين,Hussein,المبيعات,Sales,القاهرة,Cairo,12700,2021-05-27,4.2,71000,القاهرة الكبرى,Greater Cairo
+17,إسلام,Eslam,رضا,Reda,المالية,Finance,الإسكندرية,Alexandria,13800,2018-12-03,4.3,0,الدلتا,Delta
+18,أسماء,Asmaa,طه,Taha,التسويق,Marketing,الفيوم,Fayoum,10200,2022-09-14,3.7,29000,الصعيد,Upper Egypt
+19,طارق,Tarek,سالم,Salem,المبيعات,Sales,الجيزة,Giza,13100,2020-03-21,4.7,88000,القاهرة الكبرى,Greater Cairo
+20,هبة,Heba,كمال,Kamal,الموارد البشرية,HR,طنطا,Tanta,9600,2021-11-30,4.1,0,الدلتا,Delta
+21,وليد,Walid,منصور,Mansour,تقنية المعلومات,IT,القاهرة,Cairo,15800,2017-10-09,4.8,25000,القاهرة الكبرى,Greater Cairo
+22,غادة,Ghada,نصر,Nasr,المبيعات,Sales,أسيوط,Asyut,10900,2022-02-17,3.9,47000,الصعيد,Upper Egypt
+23,سامح,Sameh,عزت,Ezzat,المالية,Finance,القاهرة,Cairo,14200,2018-05-16,4.5,0,القاهرة الكبرى,Greater Cairo
+24,نهى,Noha,عادل,Adel,التسويق,Marketing,الإسكندرية,Alexandria,10800,2021-01-25,4.2,44000,الدلتا,Delta
+25,أيمن,Ayman,فاروق,Farouk,المبيعات,Sales,القاهرة,Cairo,13400,2019-08-13,4.6,95000,القاهرة الكبرى,Greater Cairo
+26,دعاء,Doaa,محمود,Mahmoud,الموارد البشرية,HR,الجيزة,Giza,9400,2022-07-07,3.6,0,القاهرة الكبرى,Greater Cairo
+27,ماجد,Maged,سامي,Samy,تقنية المعلومات,IT,سوهاج,Sohag,14500,2020-09-29,4.4,12000,الصعيد,Upper Egypt
+28,ريم,Reem,حمدي,Hamdy,المبيعات,Sales,القاهرة,Cairo,12600,2021-04-12,4.3,73000,القاهرة الكبرى,Greater Cairo
+29,سامي,Samy,حسن,Hassan,المالية,Finance,المنصورة,Mansoura,13900,2019-12-11,4.2,0,الدلتا,Delta
+30,آية,Aya,مصطفى,Mostafa,التسويق,Marketing,القاهرة,Cairo,10700,2022-04-23,4.0,36000,القاهرة الكبرى,Greater Cairo
+31,بلال,Belal,جابر,Gaber,المبيعات,Sales,الفيوم,Fayoum,11100,2021-12-05,3.8,52000,الصعيد,Upper Egypt
+32,مروة,Marwa,عبد الرحمن,Abdelrahman,تقنية المعلومات,IT,القاهرة,Cairo,15200,2018-08-20,4.7,20000,القاهرة الكبرى,Greater Cairo
+33,هشام,Hesham,توفيق,Tawfik,المبيعات,Sales,الإسكندرية,Alexandria,12800,2020-06-15,4.4,81000,الدلتا,Delta
+34,سلوى,Salwa,يوسف,Youssef,المالية,Finance,طنطا,Tanta,13600,2019-04-02,4.1,0,الدلتا,Delta
+35,كمال,Kamal,الدين,Eldin,التسويق,Marketing,الجيزة,Giza,10400,2022-08-19,3.9,31000,القاهرة الكبرى,Greater Cairo
+36,إيمان,Eman,عبد العزيز,Abdelaziz,المبيعات,Sales,سوهاج,Sohag,11300,2021-09-09,4.1,58000,الصعيد,Upper Egypt
+37,شريف,Sherif,حمدان,Hamdan,تقنية المعلومات,IT,الإسكندرية,Alexandria,16000,2017-06-28,4.9,27000,الدلتا,Delta
+38,عبير,Abeer,لطفي,Lotfy,الموارد البشرية,HR,القاهرة,Cairo,9900,2020-10-11,4.0,0,القاهرة الكبرى,Greater Cairo
+39,فارس,Fares,كريم,Karim,المبيعات,Sales,القاهرة,Cairo,13300,2019-10-24,4.5,90000,القاهرة الكبرى,Greater Cairo
+40,ياسمين,Yasmin,صلاح,Salah,التسويق,Marketing,المنصورة,Mansoura,10600,2021-07-16,4.3,43000,الدلتا,Delta
+41,عادل,Adel,منير,Mounir,المالية,Finance,أسيوط,Asyut,13700,2018-11-07,4.0,0,الصعيد,Upper Egypt
+42,نانسي,Nancy,فؤاد,Fouad,المبيعات,Sales,الجيزة,Giza,12400,2021-02-28,4.2,69000,القاهرة الكبرى,Greater Cairo
+43,زياد,Ziad,طارق,Tarek,تقنية المعلومات,IT,القاهرة,Cairo,14900,2020-01-17,4.5,19000,القاهرة الكبرى,Greater Cairo
+44,مي,Mai,هاني,Hany,التسويق,Marketing,سوهاج,Sohag,10100,2022-10-01,3.5,27000,الصعيد,Upper Egypt
+45,حمزة,Hamza,سيد,Sayed,المبيعات,Sales,طنطا,Tanta,11700,2021-06-08,4.0,61000,الدلتا,Delta
+46,لمياء,Lamiaa,عوض,Awad,الموارد البشرية,HR,الإسكندرية,Alexandria,9700,2020-04-26,3.9,0,الدلتا,Delta
+47,زياد,Ziad,محمود,Mahmoud,المالية,Finance,القاهرة,Cairo,14100,2019-01-30,4.6,0,القاهرة الكبرى,Greater Cairo
+48,بسمة,Basma,علي,Ali,المبيعات,Sales,أسيوط,Asyut,11000,2022-05-13,4.1,56000,الصعيد,Upper Egypt
+49,علي,Ali,رضوان,Radwan,تقنية المعلومات,IT,الجيزة,Giza,15500,2018-03-08,4.7,23000,القاهرة الكبرى,Greater Cairo
+50,فرح,Farah,نبيل,Nabil,التسويق,Marketing,القاهرة,Cairo,10900,2021-08-29,4.4,48000,القاهرة الكبرى,Greater Cairo

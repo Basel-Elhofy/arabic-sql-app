@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ديوان الاستعلامات — عربي إلى SQL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pattern-bg" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="seal">◈</div>
+    <div>
+      <h1>ديوان الاستعلامات</h1>
+      <p>من العربية الفصيحة والعامية إلى SQL إنجليزي — فهم سياقي عميق</p>
+    </div>
+  </div>
+  <div class="status">
+    <span id="dbStatus" class="pill">🗄️ 50 سجلًا · employees</span>
+    <span id="engineStatus" class="pill gold">⚙️ محرك محلي (بدون إنترنت)</span>
+    <button id="serverBtn" class="btn small" title="جرّب الاتصال بالسيرفر">اتصال بالسيرفر</button>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- Sidebar (right in RTL) -->
+  <aside class="sidebar">
+    <section class="card">
+      <h3>📜 أبواب الديوان</h3>
+      <div class="tabs">
+        <button class="tab active" data-tab="ask">استعلام</button>
+        <button class="tab" data-tab="update">تحديث البيانات</button>
+        <button class="tab" data-tab="help">دليل اللهجات</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>🏛️ بنية الجدول <small>employees</small></h3>
+      <ul id="schemaList" class="schema"></ul>
+    </section>
+
+    <section class="card">
+      <h3>✨ صيغ جاهزة — اضغط للتجربة</h3>
+      <div id="examples" class="examples"></div>
+    </section>
+
+    <section class="card">
+      <h3>🕰️ سجل المجلس <button id="clearHist" class="link">مسح</button></h3>
+      <ol id="history" class="history"><li class="muted">لا استعلامات بعد…</li></ol>
+    </section>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <section id="tab-ask" class="tabpanel">
+      <div class="query-card card">
+        <label for="q">اكتب سؤالك بالعربية (فصحى أو عامية):</label>
+        <div class="qrow">
+          <textarea id="q" rows="2" placeholder="مثال: اعرض أعلى 5 موظفين في المبيعات حسب المبيعات ورتبهم تنازليا"></textarea>
+          <div class="qbtns">
+            <button id="askBtn" class="btn primary">🔍 استعلم</button>
+            <button id="micBtn" class="btn" title="إملاء صوتي">🎙️</button>
+          </div>
+        </div>
+        <div class="chips" id="dialectChips"></div>
+        <div class="opts">
+          <label><input type="checkbox" id="useServer" checked> استخدم السيرفر/LLM إن توفر</label>
+          <label><input type="checkbox" id="keepCtx" checked> حافظ على سياق المحادثة (رتبهم / منهم / طب...)</label>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card sql-card">
+          <div class="card-head">
+            <h3>📝 الاستعلام المولّد <span class="en">SQL</span></h3>
+            <div>
+              <button id="copySql" class="btn small">نسخ</button>
+              <span id="confBadge" class="pill"></span>
+            </div>
+          </div>
+          <pre id="sqlOut" class="sql" dir="ltr">-- سيظهر SQL هنا…</pre>
+          <p id="explOut" class="expl"></p>
+          <p id="engineOut" class="muted small"></p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>📊 رسم النتائج</h3><span id="rowCount" class="pill"></span></div>
+          <canvas id="chart" width="520" height="220"></canvas>
+          <p class="muted small">رسم تلقائي لأول عمودين رقميين في النتيجة.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h3>📋 النتائج</h3>
+          <div>
+            <input id="searchRows" class="search" placeholder="🔎 رشّح النتائج...">
+            <button id="csvBtn" class="btn small">⬇ تصدير CSV</button>
+          </div>
+        </div>
+        <div class="table-wrap"><table id="resTable"><thead></thead><tbody><tr><td class="muted">نفّذ استعلامًا لعرض النتائج…</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section id="tab-update" class="tabpanel hidden">
+      <div class="card">
+        <h3>✏️ تحديث البيانات — يُحفظ في <code>data/company.csv</code></h3>
+        <p class="muted">عدّل أي خلية ثم اضغط حفظ. يعمل محليًا (LocalStorage) ومع السيرفر عبر <code>/api/update</code>.</p>
+        <div class="qrow">
+          <input id="updId" type="number" min="1" max="50" value="1" class="num">
+          <select id="updCol" class="sel">
+            <option value="salary_egp">المرتب salary_egp</option>
+            <option value="sales_amount_egp">المبيعات sales_amount_egp</option>
+            <option value="performance_rating">التقييم performance_rating</option>
+            <option value="city_ar">المدينة city_ar</option>
+            <option value="department_ar">القسم department_ar</option>
+          </select>
+          <input id="updVal" class="sel" placeholder="القيمة الجديدة…">
+          <button id="updBtn" class="btn primary">💾 حفظ في CSV</button>
+        </div>
+        <p id="updMsg" class="expl"></p>
+      </div>
+    </section>
+
+    <section id="tab-help" class="tabpanel hidden">
+      <div class="card">
+        <h3>🗣️ دليل اللهجات المدعومة</h3>
+        <div class="dialects">
+          <div><b>مصري:</b> عايز، وريني، كام، بكام، اللي، عدى، قبض</div>
+          <div><b>خليجي:</b> أبغى، وش، كم، وين</div>
+          <div><b>شامي:</b> بدي، فرجيني، قديش</div>
+          <div><b>فصحى:</b> اعرض، ما هو، كم عدد، رتّب</div>
+        </div>
+        <h3>🔗 كلمات المتابعة (تبني على آخر نتيجة)</h3>
+        <p>رتبهم، منهم، دول، طب، طيب، كمان، اللي فاتوا — مثال: اسأل «اعرض موظفي المبيعات» ثم «ورتبهم حسب المرتب تنازليا».</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="foot">ديوان الاستعلامات · عربي ← إنجليزي SQL · يعمل أوفلاين بالكامل · <span class="en">NLP + LLM + SQLite/CSV</span></footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "table": "employees",
+  "source_csv": "company.csv",
+  "description_ar": "جدول الموظفين والمبيعات - كل صف يمثل موظف مع بيانات القسم والراتب والمبيعات",
+  "description_en": "Employees and sales table",
+  "columns": [
+    {"name": "id", "type": "INTEGER PRIMARY KEY", "ar": ["الرقم", "الكود", "المعرف", "رقم الموظف"]},
+    {"name": "first_name_ar", "type": "TEXT", "ar": ["الاسم الأول بالعربي", "اسم الموظف"]},
+    {"name": "first_name_en", "type": "TEXT", "ar": ["الاسم الأول بالإنجليزي"]},
+    {"name": "last_name_ar", "type": "TEXT", "ar": ["اسم العائلة", "اللقب"]},
+    {"name": "last_name_en", "type": "TEXT", "ar": ["اسم العائلة بالإنجليزي"]},
+    {"name": "department_ar", "type": "TEXT", "ar": ["القسم", "الإدارة", "الشعبة"]},
+    {"name": "department_en", "type": "TEXT", "ar": ["القسم بالإنجليزي"]},
+    {"name": "city_ar", "type": "TEXT", "ar": ["المدينة", "المحافظة", "مكان السكن", "العنوان"]},
+    {"name": "city_en", "type": "TEXT", "ar": ["المدينة بالإنجليزي"]},
+    {"name": "salary_egp", "type": "REAL", "ar": ["المرتب", "الراتب", "الأجر", "الدخل", "مرتبات", "القبض"]},
+    {"name": "hire_date", "type": "DATE", "ar": ["تاريخ التعيين", "تاريخ التوظيف", "اتعين امتى", "تاريخ الالتحاق"]},
+    {"name": "performance_rating", "type": "REAL", "ar": ["التقييم", "الأداء", "التقدير", "الكفاءة"]},
+    {"name": "sales_amount_egp", "type": "REAL", "ar": ["المبيعات", "قيمة المبيعات", "الإيراد", "التحصيل", "باع", "مبيعاته"]},
+    {"name": "region_ar", "type": "TEXT", "ar": ["المنطقة", "الإقليم", "النطاق الجغرافي"]},
+    {"name": "region_en", "type": "TEXT", "ar": ["المنطقة بالإنجليزي"]}
+  ],
+  "departments_canonical": {
+    "المبيعات": "Sales",
+    "التسويق": "Marketing",
+    "تقنية المعلومات": "IT",
+    "الموارد البشرية": "HR",
+    "المالية": "Finance"
+  },
+  "sample_values": {
+    "department_ar": ["المبيعات", "التسويق", "تقنية المعلومات", "الموارد البشرية", "المالية"],
+    "city_ar": ["القاهرة", "الجيزة", "الإسكندرية", "المنصورة", "طنطا", "أسيوط", "سوهاج", "الفيوم"],
+    "region_ar": ["القاهرة الكبرى", "الدلتا", "الصعيد"]
+  }
+}
